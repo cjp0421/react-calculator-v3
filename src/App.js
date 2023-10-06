@@ -42,30 +42,37 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <h1>Simplest Working Calculator</h1>
+    <div className="App container">
+      <div className='row'>
+        <div className='col'>
+          <h1 className="header">Simplest Working Calculator</h1>
+        </div>
+
       </div>
-      <form>
-        <p ref={resultRef}> {result} </p>
-        <p ref={inputRef}>{input} </p>
-        <input
-          pattern="[0-9]"
-          ref={inputRef}
-          type="number"
-          placeholder="Type a number"
-        />
-        <button onClick={(input) => {
-          input.preventDefault();
-          setInput(input = Number(inputRef.current.value))
-        }}>Set starting input</button><br />
-        <button onClick={plus}>add</button>
-        <button onClick={minus}>subtract</button>
-        <button onClick={times}>multiply</button>
-        <button onClick={divide}>divide</button>
-        <button onClick={resetResult}>Reset Result</button>
-        <button onClick={resetInput}>Reset Input</button>
-      </form>
+      <div className='row'>
+        <form>
+          <p ref={resultRef}> {result} </p>
+          <p ref={inputRef}>{input} </p>
+          <input
+            pattern="[0-9]"
+            ref={inputRef}
+            type="number"
+            placeholder="Type a number"
+          />
+          <button onClick={(input) => {
+            input.preventDefault();
+            setInput(input = Number(inputRef.current.value))
+          }}>Set starting input</button><br />
+          <div className='buttons'>
+            <button onClick={plus}>add</button>
+            <button onClick={minus}>subtract</button>
+            <button onClick={times}>multiply</button>
+            <button onClick={divide}>divide</button>
+            <button onClick={resetResult}>Reset Result</button>
+            <button onClick={resetInput}>Reset Input</button>
+          </div>
+        </form>
+      </div>
     </div>
 
   );
