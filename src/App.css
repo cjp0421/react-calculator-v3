@@ -3,29 +3,12 @@ button {
   margin: auto;
 }
 
-div {
-  margin: 0 auto;
-  display: block;
-}
-
 input {
   margin: auto;
 }
 
-form {
-  display: flex;
-  justify-items: center;
-}
-
-p {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .container {
   display: flex;
-
 }
 
 .header {

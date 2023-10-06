@@ -42,39 +42,41 @@ function App() {
   };
 
   return (
-    <div className="App container">
-      <div className='row'>
-        <div className='col'>
-          <h1 className="header">Simplest Working Calculator</h1>
-        </div>
-
-      </div>
-      <div className='row'>
-        <form>
-          <p ref={resultRef}> {result} </p>
-          <p ref={inputRef}>{input} </p>
-          <input
-            pattern="[0-9]"
-            ref={inputRef}
-            type="number"
-            placeholder="Type a number"
-          />
-          <button onClick={(input) => {
-            input.preventDefault();
-            setInput(input = Number(inputRef.current.value))
-          }}>Set starting input</button><br />
-          <div className='buttons'>
-            <button onClick={plus}>add</button>
-            <button onClick={minus}>subtract</button>
-            <button onClick={times}>multiply</button>
-            <button onClick={divide}>divide</button>
-            <button onClick={resetResult}>Reset Result</button>
-            <button onClick={resetInput}>Reset Input</button>
+    <div className="App">
+      <div className='container'>
+        <div className='row'>
+          <div className='col'>
+            <h1 className="header">Simplest Working Calculator</h1>
           </div>
-        </form>
+
+
+          <div className='row'>
+            <form className='col-12'>
+              <p ref={resultRef}> {result} </p>
+              <p ref={inputRef}>{input} </p>
+              <input
+                pattern="[0-9]"
+                ref={inputRef}
+                type="number"
+                placeholder="Type a number"
+              />
+              <button onClick={(input) => {
+                input.preventDefault();
+                setInput(input = Number(inputRef.current.value))
+              }}>Set starting input</button><br />
+              <div className='buttons'>
+                <button onClick={plus}>add</button>
+                <button onClick={minus}>subtract</button>
+                <button onClick={times}>multiply</button>
+                <button onClick={divide}>divide</button>
+                <button onClick={resetResult}>Reset Result</button>
+                <button onClick={resetInput}>Reset Input</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-
   );
 }
 
