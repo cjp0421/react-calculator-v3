@@ -1,14 +1,24 @@
-button {
-  background-color: rgb(144, 107, 178);
-  margin: auto;
-}
-
-input {
-  margin: auto;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: flex;
+}
+
+button {
+  display: block;
+  background-color: rgb(144, 107, 178);
+  margin: auto;
+}
+
+p {
+  text-align: center;
+}
+
+input {
+  margin: auto;
 }
 
 .header {
@@ -17,6 +27,6 @@ input {
 }
 
 .buttons {
-  display: flex;
+  display: block;
   justify-content: center;
 }
